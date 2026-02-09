@@ -1,9 +1,11 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
+import ImageCarousel from "@/components/ImageCarousel";
 import WhyChooseSection from "@/components/WhyChooseSection";
 import FAQSection from "@/components/FAQSection";
 import FinalCTASection from "@/components/FinalCTASection";
+import StickyWhatsAppButton from "@/components/StickyWhatsAppButton";
 import FloatingCTA from "@/components/FloatingCTA";
 import Footer from "@/components/Footer";
 
@@ -14,11 +16,13 @@ const Index = () => {
       <main>
         <HeroSection />
         <ServicesSection />
+        <ImageCarousel />
         <WhyChooseSection />
         <FAQSection />
         <FinalCTASection />
       </main>
       <Footer />
+      <StickyWhatsAppButton />
       <FloatingCTA />
     </>
   );

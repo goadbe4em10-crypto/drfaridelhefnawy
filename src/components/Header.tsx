@@ -25,7 +25,7 @@ const Header = () => {
           </div>
           <div>
             <p className="font-cairo text-sm font-bold text-heading">د. فريد الحفناوي</p>
-            <p className="font-cairo text-xs text-muted-foreground">استشاري جراحة المخ والأعصاب</p>
+            <p className="font-cairo text-xs text-muted-foreground">استشاري جراحة المخ والأعصاب والشلل الرعاش</p>
           </div>
         </div>
 
