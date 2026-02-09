@@ -4,7 +4,7 @@ const Footer = () => {
       <div className="container text-center">
         <p className="font-cairo text-sm font-bold text-heading">د. فريد الحفناوي</p>
         <p className="mt-1 font-cairo text-xs text-muted-foreground">
-          استشاري جراحة المخ والأعصاب
+          استشاري جراحة المخ والأعصاب والشلل الرعاش
         </p>
         <p className="mt-3 font-cairo text-xs text-muted-foreground">
           جميع الحقوق محفوظة © {new Date().getFullYear()}
