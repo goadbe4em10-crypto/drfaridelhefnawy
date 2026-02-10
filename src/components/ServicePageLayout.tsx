@@ -3,9 +3,10 @@ import Footer from "./Footer";
 import CTAButtons from "./CTAButtons";
 import StickyWhatsAppButton from "./StickyWhatsAppButton";
 import FloatingCTA from "./FloatingCTA";
-import FAQSection from "./FAQSection";
 import FinalCTASection from "./FinalCTASection";
+import TestimonialsCarousel from "./TestimonialsCarousel";
 import { motion } from "framer-motion";
+import { ReactNode } from "react";
 
 interface ServiceFAQ {
   q: string;
@@ -20,6 +21,7 @@ interface ServicePageLayoutProps {
   imageAlt: string;
   details: string[];
   faqs: ServiceFAQ[];
+  contentSection?: ReactNode;
 }
 
 const ServicePageLayout = ({
@@ -30,6 +32,7 @@ const ServicePageLayout = ({
   imageAlt,
   details,
   faqs,
+  contentSection,
 }: ServicePageLayoutProps) => {
   return (
     <>
@@ -72,9 +75,9 @@ const ServicePageLayout = ({
           </div>
         </section>
 
-        {/* Details */}
+        {/* Content & Details */}
         <section className="py-16 md:py-24">
-          <div className="container max-w-3xl">
+          <div className="container max-w-4xl">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -95,6 +98,17 @@ const ServicePageLayout = ({
                 <CTAButtons />
               </div>
             </motion.div>
+
+            {/* Extra content section (videos, etc.) */}
+            {contentSection && (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+              >
+                {contentSection}
+              </motion.div>
+            )}
           </div>
         </section>
 
@@ -134,6 +148,9 @@ const ServicePageLayout = ({
             </motion.div>
           </div>
         </section>
+
+        {/* Testimonials */}
+        <TestimonialsCarousel />
 
         <FinalCTASection />
       </main>
