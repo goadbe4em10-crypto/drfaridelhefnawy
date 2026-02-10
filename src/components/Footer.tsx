@@ -86,10 +86,10 @@ const Footer = () => {
             </p>
             <div className="flex gap-3">
               {[
-                { icon: "youtube", url: "#" },
-                { icon: "instagram", url: "#" },
-                { icon: "facebook", url: "#" },
-                { icon: "tiktok", url: "#" },
+                { icon: "youtube", url: "https://www.youtube.com/@drfaridelhefnawiNeurosurgeon" },
+                { icon: "instagram", url: "https://www.instagram.com/dr.faridelhefnawi/" },
+                { icon: "facebook", url: "https://www.facebook.com/drfaridelhefnawi/" },
+                { icon: "tiktok", url: "https://www.tiktok.com/@dr.faridelhefnawi" },
               ].map((s) => (
                 <a
                   key={s.icon}

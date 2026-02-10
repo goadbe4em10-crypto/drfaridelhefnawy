@@ -3,7 +3,6 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CTAButtons from "@/components/CTAButtons";
 import StickyWhatsAppButton from "@/components/StickyWhatsAppButton";
-import FloatingCTA from "@/components/FloatingCTA";
 import FinalCTASection from "@/components/FinalCTASection";
 import TestimonialsCarousel from "@/components/TestimonialsCarousel";
 import { motion } from "framer-motion";
@@ -481,7 +480,6 @@ const DiscService = () => {
       </main>
       <Footer />
       <StickyWhatsAppButton />
-      <FloatingCTA />
     </>
   );
 };

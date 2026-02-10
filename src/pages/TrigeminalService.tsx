@@ -3,9 +3,9 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CTAButtons from "@/components/CTAButtons";
 import StickyWhatsAppButton from "@/components/StickyWhatsAppButton";
-import FloatingCTA from "@/components/FloatingCTA";
 import FinalCTASection from "@/components/FinalCTASection";
 import TestimonialsCarousel from "@/components/TestimonialsCarousel";
+import VideoCarousel from "@/components/VideoCarousel";
 import { motion } from "framer-motion";
 import {
   AlertTriangle,
@@ -448,6 +448,19 @@ const TrigeminalService = () => {
           </div>
         </section>
 
+        {/* ===== VIDEOS ===== */}
+        <section className="py-16 md:py-24">
+          <div className="container max-w-4xl">
+            <VideoCarousel
+              title="فيديوهات عن العصب الخامس"
+              videos={[
+                { id: "6K06SeuXYg8", title: "فيديو عن العصب الخامس ١" },
+                { id: "Lt524Llvrno", title: "فيديو عن العصب الخامس ٢" },
+              ]}
+            />
+          </div>
+        </section>
+
         {/* ===== TESTIMONIALS ===== */}
         <TestimonialsCarousel />
 
@@ -456,7 +469,6 @@ const TrigeminalService = () => {
       </main>
       <Footer />
       <StickyWhatsAppButton />
-      <FloatingCTA />
     </>
   );
 };

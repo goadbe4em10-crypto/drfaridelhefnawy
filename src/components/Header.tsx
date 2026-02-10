@@ -104,20 +104,22 @@ const Header = () => {
                   </div>
                 )}
               </div>
-            ) : (
+            ) : link.href.startsWith("/#") ? (
               <button
                 key={link.label}
-                onClick={() => {
-                  if (link.href === "/") {
-                    window.location.href = "/";
-                  } else {
-                    handleNavClick(link.href);
-                  }
-                }}
+                onClick={() => handleNavClick(link.href)}
                 className="rounded-lg px-3 py-2 font-cairo text-sm font-semibold text-heading transition-colors hover:bg-primary-light hover:text-primary"
               >
                 {link.label}
               </button>
+            ) : (
+              <Link
+                key={link.label}
+                to={link.href}
+                className="rounded-lg px-3 py-2 font-cairo text-sm font-semibold text-heading transition-colors hover:bg-primary-light hover:text-primary"
+              >
+                {link.label}
+              </Link>
             )
           )}
         </nav>
@@ -169,20 +171,23 @@ const Header = () => {
                   </div>
                 )}
               </div>
-            ) : (
+            ) : link.href.startsWith("/#") ? (
               <button
                 key={link.label}
-                onClick={() => {
-                  if (link.href === "/") {
-                    window.location.href = "/";
-                  } else {
-                    handleNavClick(link.href);
-                  }
-                }}
+                onClick={() => handleNavClick(link.href)}
                 className="block w-full rounded-lg px-3 py-3 text-right font-cairo text-sm font-semibold text-heading transition-colors hover:bg-primary-light"
               >
                 {link.label}
               </button>
+            ) : (
+              <Link
+                key={link.label}
+                to={link.href}
+                onClick={() => setMobileOpen(false)}
+                className="block w-full rounded-lg px-3 py-3 text-right font-cairo text-sm font-semibold text-heading transition-colors hover:bg-primary-light"
+              >
+                {link.label}
+              </Link>
             )
           )}
         </div>
