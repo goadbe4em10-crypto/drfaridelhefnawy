@@ -2,14 +2,16 @@ import { motion } from "framer-motion";
 import useEmblaCarousel from "embla-carousel-react";
 import { useCallback, useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import brainImg from "@/assets/brain-illustration.jpg";
-import spineImg from "@/assets/spine-illustration.jpg";
-import nerveImg from "@/assets/nerve-illustration.jpg";
+import success1 from "@/assets/success-1.png";
+import success2 from "@/assets/success-2.png";
+import success3 from "@/assets/success-3.png";
+import success4 from "@/assets/success-4.png";
 
 const images = [
-  { src: brainImg, alt: "تصوير توضيحي للمخ" },
-  { src: spineImg, alt: "تصوير توضيحي للعمود الفقري" },
-  { src: nerveImg, alt: "تصوير توضيحي للأعصاب" },
+  { src: success1, alt: "قصة نجاح - عملية عمود فقري قبل وبعد" },
+  { src: success2, alt: "قصة نجاح - عملية فقرات عنقية قبل وبعد" },
+  { src: success3, alt: "قصة نجاح - عملية تثبيت فقرات قبل وبعد" },
+  { src: success4, alt: "قصة نجاح - عملية مخ قبل وبعد" },
 ];
 
 const ImageCarousel = () => {
@@ -42,7 +44,7 @@ const ImageCarousel = () => {
           className="mb-10 text-center"
         >
           <h2 className="mb-3 font-cairo text-3xl font-extrabold text-heading md:text-4xl">
-            صور طبية توضيحية
+            قصص نجاح
           </h2>
         </motion.div>
 

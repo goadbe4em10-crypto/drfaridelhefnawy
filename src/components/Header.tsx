@@ -1,6 +1,7 @@
 import { Phone, Menu, X, ChevronDown } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
+import logoImg from "@/assets/logo.png";
 
 const PHONE = "01006074000";
 
@@ -70,14 +71,8 @@ const Header = () => {
     >
       <div className="container flex items-center justify-between py-3">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
-            <span className="font-cairo text-lg font-bold text-primary-foreground">د.ف</span>
-          </div>
-          <div className="hidden sm:block">
-            <p className="font-cairo text-sm font-bold text-heading">د. فريد الحفناوي</p>
-            <p className="font-cairo text-xs text-muted-foreground">استشاري جراحة المخ والأعصاب والشلل الرعاش</p>
-          </div>
+        <Link to="/" className="flex items-center gap-2">
+          <img src={logoImg} alt="د. فريد الحفناوي" className="h-12 w-auto" />
         </Link>
 
         {/* Desktop Nav */}
