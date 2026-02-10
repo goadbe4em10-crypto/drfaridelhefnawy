@@ -8,6 +8,7 @@ import ParkinsonService from "./pages/ParkinsonService";
 import DiscService from "./pages/DiscService";
 import TrigeminalService from "./pages/TrigeminalService";
 import NotFound from "./pages/NotFound";
+import AboutDoctor from "./pages/AboutDoctor";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +23,7 @@ const App = () => (
           <Route path="/علاج-الشلل-الرعاش" element={<ParkinsonService />} />
           <Route path="/علاج-الانزلاق-الغضروفي" element={<DiscService />} />
           <Route path="/علاج-العصب-الخامس" element={<TrigeminalService />} />
+          <Route path="/عن-الدكتور" element={<AboutDoctor />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
