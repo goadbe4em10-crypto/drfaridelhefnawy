@@ -159,7 +159,7 @@ const ParkinsonService = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7 }}
               >
-                <h1 className="mb-5 font-cairo text-2xl font-extrabold leading-tight text-heading md:text-4xl lg:text-5xl">
+                <h1 className="mb-5 font-cairo text-xl font-extrabold leading-snug text-heading md:text-2xl lg:text-3xl">
                   هل تعاني أنت أو أحد والديك من رعشة مستمرة في اليد أو بطء في
                   الحركة أو تيبس في العضلات؟
                 </h1>
