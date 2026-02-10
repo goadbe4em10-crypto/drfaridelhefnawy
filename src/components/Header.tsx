@@ -26,6 +26,7 @@ const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const mobileDropdownRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -37,7 +38,10 @@ const Header = () => {
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+      const target = e.target as Node;
+      const isOutsideDesktop = dropdownRef.current && !dropdownRef.current.contains(target);
+      const isOutsideMobile = !mobileDropdownRef.current || !mobileDropdownRef.current.contains(target);
+      if (isOutsideDesktop && isOutsideMobile) {
         setDropdownOpen(false);
       }
     };
@@ -150,7 +154,7 @@ const Header = () => {
         <div className="border-t border-border bg-background px-4 pb-4 lg:hidden">
           {navLinks.map((link) =>
             link.children ? (
-              <div key={link.label}>
+              <div key={link.label} ref={mobileDropdownRef}>
                 <button
                   onClick={() => setDropdownOpen(!dropdownOpen)}
                   className="flex w-full items-center justify-between rounded-lg px-3 py-3 font-cairo text-sm font-semibold text-heading"
@@ -161,17 +165,18 @@ const Header = () => {
                 {dropdownOpen && (
                   <div className="mr-4 space-y-1">
                     {link.children.map((child) => (
-                      <button
+                      <Link
                         key={child.href}
-                        onClick={() => {
+                        to={child.href}
+                        onClick={(e) => {
+                          e.stopPropagation();
                           setMobileOpen(false);
                           setDropdownOpen(false);
-                          navigate(child.href);
                         }}
                         className="block w-full text-right rounded-lg px-4 py-2.5 font-cairo text-sm text-muted-foreground transition-colors hover:bg-primary-light hover:text-primary"
                       >
                         {child.label}
-                      </button>
+                      </Link>
                     ))}
                   </div>
                 )}
