@@ -1,6 +1,6 @@
 import { Phone, Menu, X, ChevronDown } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import logoImg from "@/assets/logo.png";
 
 const PHONE = "01006074000";
@@ -27,6 +27,7 @@ const Header = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 20);
@@ -160,14 +161,17 @@ const Header = () => {
                 {dropdownOpen && (
                   <div className="mr-4 space-y-1">
                     {link.children.map((child) => (
-                      <a
+                      <button
                         key={child.href}
-                        href={child.href}
-                        onClick={() => setMobileOpen(false)}
-                        className="block rounded-lg px-4 py-2.5 font-cairo text-sm text-muted-foreground transition-colors hover:bg-primary-light hover:text-primary"
+                        onClick={() => {
+                          setMobileOpen(false);
+                          setDropdownOpen(false);
+                          navigate(child.href);
+                        }}
+                        className="block w-full text-right rounded-lg px-4 py-2.5 font-cairo text-sm text-muted-foreground transition-colors hover:bg-primary-light hover:text-primary"
                       >
                         {child.label}
-                      </a>
+                      </button>
                     ))}
                   </div>
                 )}
