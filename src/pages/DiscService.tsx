@@ -146,37 +146,17 @@ const DiscService = () => {
                 transition={{ duration: 0.7 }}
               >
                 <h1 className="mb-5 font-cairo text-xl font-extrabold leading-snug text-heading md:text-2xl lg:text-3xl">
-                  ألم أسفل الظهر أو عرق النسا يمنعك من الجلوس أو النوم؟
-                  <br />
-                  <span className="text-primary">تنميل في الساق؟ ألم ممتد للقدم؟</span>
+                  علاج الانزلاق الغضروفي
                 </h1>
+                <p className="mb-4 font-cairo text-base leading-relaxed text-muted-foreground md:text-lg">
+                  ألم أسفل الظهر أو عرق النسا يمنعك من الجلوس أو النوم؟ تنميل في الساق؟ ألم ممتد للقدم؟
+                </p>
                 <p className="mb-4 font-cairo text-base leading-relaxed text-muted-foreground md:text-lg">
                   قد يكون السبب انزلاق غضروفي وليس مجرد شد عضلي.
                 </p>
                 <p className="mb-6 font-cairo text-base leading-relaxed text-muted-foreground md:text-lg">
                   مع التشخيص الصحيح يمكن علاج معظم الحالات بدون جراحة، وفي الحالات المتقدمة يمكن التدخل المحدود بالمنظار أو التردد الحراري بنتائج ممتازة.
                 </p>
-
-                <div className="mb-6 rounded-xl border border-primary/20 bg-primary/5 p-5">
-                  <p className="mb-1 font-cairo text-sm text-muted-foreground">مع</p>
-                  <p className="font-cairo text-xl font-extrabold text-heading">د. فريد الحفناوي</p>
-                  <p className="mb-4 font-cairo text-sm font-semibold text-primary">
-                    استشاري جراحة المخ والأعصاب والعمود الفقري
-                  </p>
-                  <ul className="space-y-2">
-                    {[
-                      "تشخيص دقيق لسبب الألم",
-                      "علاج تحفظي أو تداخلي حسب الحالة",
-                      "عمليات الغضروف بالمنظار بدون جراحة كبيرة",
-                      "متابعة حتى اختفاء الألم",
-                    ].map((item, i) => (
-                      <li key={i} className="flex items-start gap-2 font-cairo text-sm text-heading">
-                        <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
 
                 <CTAButtons size="large" />
               </motion.div>
@@ -496,27 +476,6 @@ const DiscService = () => {
         {/* ===== TESTIMONIALS ===== */}
         <TestimonialsCarousel />
 
-        {/* ===== FINAL CTA ===== */}
-        <section className="relative overflow-hidden py-16 md:py-24">
-          <div className="absolute inset-0 bg-primary" />
-          <div className="absolute inset-0 bg-gradient-to-br from-primary-dark/50 to-transparent" />
-          <div className="container relative z-10 text-center">
-            <motion.div {...fadeUp}>
-              <h2 className="mb-4 font-cairo text-2xl font-extrabold text-primary-foreground md:text-3xl">
-                لا تنتظر حتى يتحول الألم إلى ضعف دائم في العصب.
-              </h2>
-              <p className="mx-auto mb-4 max-w-2xl font-cairo text-lg text-primary-foreground/85">
-                التشخيص المبكر يوفر عليك عملية كبيرة.
-              </p>
-              <p className="mx-auto mb-8 max-w-2xl font-cairo text-lg font-bold text-primary-foreground">
-                احجز الآن مع د. فريد الحفناوي استشاري جراحة العمود الفقري
-              </p>
-              <div className="flex justify-center">
-                <CTAButtons size="large" />
-              </div>
-            </motion.div>
-          </div>
-        </section>
 
         <FinalCTASection />
       </main>
