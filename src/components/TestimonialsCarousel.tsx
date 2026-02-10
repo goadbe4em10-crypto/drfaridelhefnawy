@@ -2,18 +2,22 @@ import { motion } from "framer-motion";
 import useEmblaCarousel from "embla-carousel-react";
 import { useCallback, useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import review1 from "@/assets/review-1.jpg";
-import review2 from "@/assets/review-2.jpg";
-import review3 from "@/assets/review-3.jpg";
+import review1 from "@/assets/review-1.png";
+import review2 from "@/assets/review-2.png";
+import review3 from "@/assets/review-3.png";
+import review4 from "@/assets/review-4.png";
+import review5 from "@/assets/review-5.png";
 
 const reviews = [
-  { src: review1, alt: "رأي مريض - تجربة علاج ناجحة" },
-  { src: review2, alt: "رأي مريض - شكر للدكتور" },
-  { src: review3, alt: "رأي مريض - رعاية طبية ممتازة" },
+  { src: review1, alt: "رأي مريض - Zizi Abdulla" },
+  { src: review2, alt: "رأي مريض - Eman Sammour" },
+  { src: review3, alt: "رأي مريض - Mohammed Adel" },
+  { src: review4, alt: "رأي مريض - Rania El Kelesh" },
+  { src: review5, alt: "رأي مريض - Hamada Ghannem" },
 ];
 
 const TestimonialsCarousel = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, direction: "rtl" });
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, direction: "rtl", align: "start" });
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
@@ -33,7 +37,7 @@ const TestimonialsCarousel = () => {
   }, [emblaApi]);
 
   return (
-    <section className="py-16 md:py-24">
+    <section className="py-16 md:py-24" id="testimonials">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -49,15 +53,15 @@ const TestimonialsCarousel = () => {
           </p>
         </motion.div>
 
-        <div className="relative mx-auto max-w-md">
+        <div className="relative mx-auto max-w-2xl">
           <div className="overflow-hidden rounded-2xl" ref={emblaRef}>
             <div className="flex">
               {reviews.map((img, i) => (
-                <div key={i} className="min-w-0 flex-[0_0_100%]">
+                <div key={i} className="min-w-0 flex-[0_0_100%] px-2 md:flex-[0_0_50%]">
                   <img
                     src={img.src}
                     alt={img.alt}
-                    className="h-auto w-full rounded-2xl object-cover shadow-card"
+                    className="h-auto w-full rounded-2xl object-contain"
                     loading="lazy"
                   />
                 </div>
