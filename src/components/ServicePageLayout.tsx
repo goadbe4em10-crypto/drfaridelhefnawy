@@ -13,6 +13,11 @@ interface ServiceFAQ {
   a: string;
 }
 
+interface ServiceArticle {
+  title: string;
+  body: string;
+}
+
 interface ServicePageLayoutProps {
   title: string;
   subtitle: string;
@@ -20,6 +25,7 @@ interface ServicePageLayoutProps {
   image: string;
   imageAlt: string;
   details: string[];
+  articles?: ServiceArticle[];
   faqs: ServiceFAQ[];
   contentSection?: ReactNode;
 }
@@ -31,6 +37,7 @@ const ServicePageLayout = ({
   image,
   imageAlt,
   details,
+  articles = [],
   faqs,
   contentSection,
 }: ServicePageLayoutProps) => {
@@ -75,7 +82,7 @@ const ServicePageLayout = ({
           </div>
         </section>
 
-        {/* Content & Details */}
+        {/* Content & Details with Articles */}
         <section className="py-16 md:py-24">
           <div className="container max-w-4xl">
             <motion.div
@@ -86,14 +93,35 @@ const ServicePageLayout = ({
               <h2 className="mb-6 font-cairo text-2xl font-extrabold text-heading md:text-3xl">
                 تفاصيل العلاج
               </h2>
-              <ul className="space-y-4">
-                {details.map((detail, i) => (
-                  <li key={i} className="flex items-start gap-3 font-cairo text-muted-foreground leading-relaxed">
+
+              {details.map((detail, i) => (
+                <div key={i}>
+                  {/* Detail bullet */}
+                  <div className="flex items-start gap-3 font-cairo text-muted-foreground leading-relaxed mb-4">
                     <span className="mt-1.5 h-2.5 w-2.5 flex-shrink-0 rounded-full bg-primary" />
                     {detail}
-                  </li>
-                ))}
-              </ul>
+                  </div>
+
+                  {/* Article block after every 2 details */}
+                  {articles.length > 0 && (i + 1) % 2 === 0 && articles[Math.floor(i / 2)] && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 15 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      className="my-8 rounded-2xl border border-primary/20 bg-primary/5 p-6 md:p-8"
+                    >
+                      <h3 className="mb-3 font-cairo text-lg font-bold text-heading md:text-xl">
+                        {articles[Math.floor(i / 2)].title}
+                      </h3>
+                      <p className="mb-5 font-cairo leading-relaxed text-muted-foreground">
+                        {articles[Math.floor(i / 2)].body}
+                      </p>
+                      <CTAButtons />
+                    </motion.div>
+                  )}
+                </div>
+              ))}
+
               <div className="mt-8">
                 <CTAButtons />
               </div>
