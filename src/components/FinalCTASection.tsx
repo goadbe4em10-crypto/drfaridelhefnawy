@@ -17,10 +17,11 @@ const FinalCTASection = () => {
     const trimmedMessage = message.trim().slice(0, 500);
     if (!trimmedName || !trimmedPhone) return;
 
-    const whatsappText = encodeURIComponent(
-      `مرحباً د. فريد، أنا ${trimmedName}\nرقم التواصل: ${trimmedPhone}\n${trimmedMessage ? `الرسالة: ${trimmedMessage}` : ""}`
+    const subject = encodeURIComponent(`استفسار من ${trimmedName}`);
+    const body = encodeURIComponent(
+      `الاسم: ${trimmedName}\nرقم التواصل: ${trimmedPhone}\n${trimmedMessage ? `الرسالة: ${trimmedMessage}` : ""}`
     );
-    window.open(`https://wa.me/2${PHONE}?text=${whatsappText}`, "_blank");
+    window.location.href = `mailto:go.ad.be4em10@gmail.com?subject=${subject}&body=${body}`;
   };
 
   return (
@@ -45,9 +46,6 @@ const FinalCTASection = () => {
             <div className="flex justify-center md:justify-start">
               <CTAButtons size="large" />
             </div>
-            <p className="mt-6 font-cairo text-primary-foreground/70" dir="ltr">
-              {PHONE}
-            </p>
           </motion.div>
 
           {/* Form */}
@@ -97,7 +95,7 @@ const FinalCTASection = () => {
                   className="flex w-full items-center justify-center gap-2 rounded-xl bg-primary-foreground py-3 font-cairo text-sm font-bold text-primary transition-opacity hover:opacity-90"
                 >
                   <Send className="h-4 w-4" />
-                  أرسل عبر واتساب
+                  أرسل
                 </button>
               </div>
             </form>
