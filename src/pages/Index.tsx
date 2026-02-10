@@ -8,6 +8,7 @@ import FinalCTASection from "@/components/FinalCTASection";
 import StickyWhatsAppButton from "@/components/StickyWhatsAppButton";
 import FloatingCTA from "@/components/FloatingCTA";
 import Footer from "@/components/Footer";
+import TestimonialsCarousel from "@/components/TestimonialsCarousel";
 
 const Index = () => {
   return (
@@ -18,6 +19,7 @@ const Index = () => {
         <ServicesSection />
         <ImageCarousel />
         <WhyChooseSection />
+        <TestimonialsCarousel />
         <FAQSection />
         <FinalCTASection />
       </main>
