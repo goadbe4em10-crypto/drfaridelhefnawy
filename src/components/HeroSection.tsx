@@ -14,7 +14,7 @@ const HeroSection = () => {
             className="order-2 md:order-1"
           >
             <p className="mb-3 inline-block rounded-full bg-primary-light px-4 py-1 font-cairo text-sm font-semibold text-primary">
-              استشاري جراحة المخ والأعصاب والشلل الرعاش
+              جراحة مخ وأعصاب وظيفية لعلاج شلل الرعاش والصرع وجراحات التدخل المحدود للعمود الفقري
             </p>
             <h1 className="mb-4 font-cairo text-3xl font-extrabold leading-tight text-heading md:text-5xl">
               د. فريد الحفناوي
