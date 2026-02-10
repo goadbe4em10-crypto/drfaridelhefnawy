@@ -143,10 +143,11 @@ const TrigeminalService = () => {
                 transition={{ duration: 0.7 }}
               >
                 <h1 className="mb-5 font-cairo text-xl font-extrabold leading-snug text-heading md:text-2xl lg:text-3xl">
-                  ألم مفاجئ في الوجه يشبه الصعق الكهربائي؟
-                  <br />
-                  <span className="text-primary">ألم يمنعك من الأكل أو الكلام أو حتى لمس وجهك؟</span>
+                  علاج العصب الخامس
                 </h1>
+                <p className="mb-4 font-cairo text-base leading-relaxed text-muted-foreground md:text-lg">
+                  ألم مفاجئ في الوجه يشبه الصعق الكهربائي؟ ألم يمنعك من الأكل أو الكلام أو حتى لمس وجهك؟
+                </p>
                 <p className="mb-4 font-cairo text-base leading-relaxed text-muted-foreground md:text-lg">
                   غالبًا هذه ليست مشكلة أسنان… بل التهاب العصب الخامس.
                 </p>
@@ -154,27 +155,6 @@ const TrigeminalService = () => {
                 <p className="mb-6 font-cairo text-base leading-relaxed text-muted-foreground md:text-lg">
                   يمكن علاج العصب الخامس نهائيًا في كثير من الحالات بدون جراحة كبيرة، باستخدام الأدوية أو التردد الحراري أو التدخل الدقيق حسب حالتك.
                 </p>
-
-                <div className="mb-6 rounded-xl border border-primary/20 bg-primary/5 p-5">
-                  <p className="mb-1 font-cairo text-sm text-muted-foreground">مع</p>
-                  <p className="font-cairo text-xl font-extrabold text-heading">د. فريد الحفناوي</p>
-                  <p className="mb-4 font-cairo text-sm font-semibold text-primary">
-                    استشاري جراحة المخ والأعصاب والعمود الفقري
-                  </p>
-                  <ul className="space-y-2">
-                    {[
-                      "تشخيص دقيق لحالات العصب الخامس",
-                      "علاج دوائي وتداخلي متقدم",
-                      "جلسات التردد الحراري لعلاج الألم",
-                      "متابعة حتى اختفاء النوبات",
-                    ].map((item, i) => (
-                      <li key={i} className="flex items-start gap-2 font-cairo text-sm text-heading">
-                        <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
 
                 <CTAButtons size="large" />
               </motion.div>
@@ -471,24 +451,6 @@ const TrigeminalService = () => {
         {/* ===== TESTIMONIALS ===== */}
         <TestimonialsCarousel />
 
-        {/* ===== FINAL CTA ===== */}
-        <section className="relative overflow-hidden py-16 md:py-24">
-          <div className="absolute inset-0 bg-primary" />
-          <div className="absolute inset-0 bg-gradient-to-br from-primary-dark/50 to-transparent" />
-          <div className="container relative z-10 text-center">
-            <motion.div {...fadeUp}>
-              <h2 className="mb-4 font-cairo text-2xl font-extrabold text-primary-foreground md:text-3xl">
-                لا تنتظر… لأن الألم يزداد مع الوقت.
-              </h2>
-              <p className="mx-auto mb-8 max-w-2xl font-cairo text-lg font-bold text-primary-foreground">
-                احجز الآن مع د. فريد الحفناوي استشاري جراحة المخ والأعصاب
-              </p>
-              <div className="flex justify-center">
-                <CTAButtons size="large" />
-              </div>
-            </motion.div>
-          </div>
-        </section>
 
         <FinalCTASection />
       </main>

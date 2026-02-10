@@ -160,9 +160,12 @@ const ParkinsonService = () => {
                 transition={{ duration: 0.7 }}
               >
                 <h1 className="mb-5 font-cairo text-xl font-extrabold leading-snug text-heading md:text-2xl lg:text-3xl">
+                  علاج الشلل الرعاش (باركنسون)
+                </h1>
+                <p className="mb-4 font-cairo text-base leading-relaxed text-muted-foreground md:text-lg">
                   هل تعاني أنت أو أحد والديك من رعشة مستمرة في اليد أو بطء في
                   الحركة أو تيبس في العضلات؟
-                </h1>
+                </p>
                 <p className="mb-2 font-cairo text-lg font-bold text-primary md:text-xl">
                   لا تقلق…
                 </p>
@@ -174,34 +177,6 @@ const ParkinsonService = () => {
                   (DBS) يمكن السيطرة على الأعراض بشكل كبير واستعادة القدرة على
                   ممارسة الحياة بصورة طبيعية.
                 </p>
-
-                <div className="mb-6 rounded-xl border border-primary/20 bg-primary/5 p-5">
-                  <p className="mb-1 font-cairo text-sm text-muted-foreground">
-                    مع
-                  </p>
-                  <p className="font-cairo text-xl font-extrabold text-heading">
-                    د. فريد الحفناوي
-                  </p>
-                  <p className="mb-4 font-cairo text-sm font-semibold text-primary">
-                    استشاري جراحة المخ والأعصاب والعمود الفقري
-                  </p>
-                  <ul className="space-y-2">
-                    {[
-                      "تشخيص دقيق لحالات باركنسون",
-                      "أحدث بروتوكولات علاج مرض باركنسون",
-                      "إمكانية إجراء عملية التحفيز العميق للدماغ",
-                      "متابعة مستمرة بعد العلاج",
-                    ].map((item, i) => (
-                      <li
-                        key={i}
-                        className="flex items-start gap-2 font-cairo text-sm text-heading"
-                      >
-                        <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
 
                 <CTAButtons size="large" />
               </motion.div>
@@ -551,29 +526,6 @@ const ParkinsonService = () => {
         {/* ===== TESTIMONIALS ===== */}
         <TestimonialsCarousel />
 
-        {/* ===== FINAL CTA ===== */}
-        <section className="relative overflow-hidden py-16 md:py-24">
-          <div className="absolute inset-0 bg-primary" />
-          <div className="absolute inset-0 bg-gradient-to-br from-primary-dark/50 to-transparent" />
-          <div className="container relative z-10 text-center">
-            <motion.div {...fadeUp}>
-              <h2 className="mb-4 font-cairo text-3xl font-extrabold text-primary-foreground md:text-4xl">
-                لا تترك الرعشة تزداد وتؤثر على حركة المريض أو استقلاليته.
-              </h2>
-              <p className="mx-auto mb-4 max-w-2xl font-cairo text-lg text-primary-foreground/85">
-                التدخل المبكر يساعد على نتائج أفضل بكثير.
-              </p>
-              <p className="mx-auto mb-8 max-w-2xl font-cairo text-lg font-bold text-primary-foreground">
-                احجز موعدك الآن مع د. فريد الحفناوي
-                <br />
-                أو تواصل واتساب لمعرفة هل الحالة مناسبة للعلاج أو عملية DBS.
-              </p>
-              <div className="flex justify-center">
-                <CTAButtons size="large" />
-              </div>
-            </motion.div>
-          </div>
-        </section>
 
         <FinalCTASection />
       </main>
