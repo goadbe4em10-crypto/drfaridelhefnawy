@@ -61,7 +61,9 @@ const ServicesSection = () => {
               className="grid items-center gap-8 md:grid-cols-2 md:gap-12"
             >
               <div className={index % 2 === 1 ? "md:order-2" : ""}>
-                <h3 className="mb-3 font-cairo text-2xl font-bold text-heading">{service.title}</h3>
+                <Link to={service.link} className="mb-3 block font-cairo text-2xl font-bold text-heading hover:text-primary transition-colors">
+                  {service.title}
+                </Link>
                 <p className="mb-6 font-cairo leading-relaxed text-muted-foreground">
                   {service.description}
                 </p>

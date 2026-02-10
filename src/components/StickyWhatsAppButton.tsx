@@ -11,7 +11,7 @@ const StickyWhatsAppButton = () => {
         href={`tel:${PHONE}`}
         animate={{ rotate: [0, -10, 10, -10, 10, 0] }}
         transition={{ duration: 0.6, repeat: Infinity, repeatDelay: 2 }}
-        className="flex h-14 w-14 items-center justify-center rounded-full bg-primary shadow-cta"
+        className="flex h-14 w-14 items-center justify-center rounded-full bg-blue-600 shadow-cta"
         aria-label="اتصل الآن"
       >
         <Phone className="h-6 w-6 text-primary-foreground" />

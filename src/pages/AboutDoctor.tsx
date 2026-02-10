@@ -1,8 +1,8 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyWhatsAppButton from "@/components/StickyWhatsAppButton";
-import FloatingCTA from "@/components/FloatingCTA";
 import TestimonialsCarousel from "@/components/TestimonialsCarousel";
+import VideoCarousel from "@/components/VideoCarousel";
 import { motion } from "framer-motion";
 import { Award, Users, Clock, Heart, GraduationCap, Stethoscope, Brain, Activity } from "lucide-react";
 import doctorImg from "@/assets/doctor-portrait.png";
@@ -190,11 +190,22 @@ const AboutDoctor = () => {
           </div>
         </section>
 
+        {/* ===== VIDEO ===== */}
+        <section className="py-16 md:py-24">
+          <div className="container max-w-4xl">
+            <VideoCarousel
+              title="تعرف على د. فريد الحفناوي"
+              videos={[
+                { id: "8X1D5qV8qeI", title: "تعرف على د. فريد الحفناوي" },
+              ]}
+            />
+          </div>
+        </section>
+
         <TestimonialsCarousel />
       </main>
       <Footer />
       <StickyWhatsAppButton />
-      <FloatingCTA />
     </>
   );
 };

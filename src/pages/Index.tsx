@@ -6,7 +6,7 @@ import WhyChooseSection from "@/components/WhyChooseSection";
 import FAQSection from "@/components/FAQSection";
 import FinalCTASection from "@/components/FinalCTASection";
 import StickyWhatsAppButton from "@/components/StickyWhatsAppButton";
-import FloatingCTA from "@/components/FloatingCTA";
+
 import Footer from "@/components/Footer";
 import TestimonialsCarousel from "@/components/TestimonialsCarousel";
 
@@ -25,7 +25,7 @@ const Index = () => {
       </main>
       <Footer />
       <StickyWhatsAppButton />
-      <FloatingCTA />
+      
     </>
   );
 };
