@@ -7,7 +7,7 @@ const PHONE = "01006074000";
 
 const navLinks = [
   { label: "الرئيسية", href: "/" },
-  { label: "عن الدكتور", href: "/#about" },
+  { label: "عن الدكتور", href: "/عن-الدكتور" },
   {
     label: "الخدمات",
     href: "/#services",
@@ -60,6 +60,8 @@ const Header = () => {
       } else {
         window.location.href = href;
       }
+    } else {
+      window.location.href = href;
     }
   };
 
