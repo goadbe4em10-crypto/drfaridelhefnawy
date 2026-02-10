@@ -160,14 +160,14 @@ const Header = () => {
                 {dropdownOpen && (
                   <div className="mr-4 space-y-1">
                     {link.children.map((child) => (
-                      <Link
+                      <a
                         key={child.href}
-                        to={child.href}
+                        href={child.href}
                         onClick={() => setMobileOpen(false)}
                         className="block rounded-lg px-4 py-2.5 font-cairo text-sm text-muted-foreground transition-colors hover:bg-primary-light hover:text-primary"
                       >
                         {child.label}
-                      </Link>
+                      </a>
                     ))}
                   </div>
                 )}
