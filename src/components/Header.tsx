@@ -163,6 +163,7 @@ const Header = () => {
                       <Link
                         key={child.href}
                         to={child.href}
+                        onClick={() => setMobileOpen(false)}
                         className="block rounded-lg px-4 py-2.5 font-cairo text-sm text-muted-foreground transition-colors hover:bg-primary-light hover:text-primary"
                       >
                         {child.label}

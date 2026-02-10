@@ -25,8 +25,6 @@ import brainImg from "@/assets/brain-illustration.jpg";
 const PHONE = "01006074000";
 
 const parkinsonVideos = [
-  { id: "ARy2M52S7Xg", title: "ما هو مرض الشلل الرعاش؟" },
-  { id: "cMJgR8b4sO0", title: "التحفيز العميق للمخ - كيف يعمل؟" },
   { id: "ysD5ie-9yNE", title: "فيديو توعوي ١" },
   { id: "y9KqHgqtVSk", title: "فيديو توعوي ٢" },
   { id: "xMWYDFtduzE", title: "فيديو توعوي ٣" },
