@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import useEmblaCarousel from "embla-carousel-react";
 import { useCallback, useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight, Play } from "lucide-react";
@@ -12,6 +11,42 @@ interface VideoCarouselProps {
   title?: string;
   videos: VideoItem[];
 }
+
+const YouTubeFacade = ({ id, title }: { id: string; title: string }) => {
+  const [loaded, setLoaded] = useState(false);
+
+  if (loaded) {
+    return (
+      <iframe
+        src={`https://www.youtube.com/embed/${id}?autoplay=1`}
+        title={title}
+        className="aspect-video w-full"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      />
+    );
+  }
+
+  return (
+    <button
+      onClick={() => setLoaded(true)}
+      className="group relative aspect-video w-full cursor-pointer bg-black"
+      aria-label={`تشغيل ${title}`}
+    >
+      <img
+        src={`https://i.ytimg.com/vi/${id}/hqdefault.jpg`}
+        alt={title}
+        className="h-full w-full object-cover"
+        loading="lazy"
+      />
+      <div className="absolute inset-0 flex items-center justify-center bg-black/30 transition-colors group-hover:bg-black/40">
+        <div className="flex h-16 w-16 items-center justify-center rounded-full bg-red-600 transition-transform group-hover:scale-110">
+          <Play className="h-7 w-7 text-white" fill="white" />
+        </div>
+      </div>
+    </button>
+  );
+};
 
 const VideoCarousel = ({ title = "فيديوهات توعوية", videos }: VideoCarouselProps) => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, direction: "rtl" });
@@ -42,18 +77,13 @@ const VideoCarousel = ({ title = "فيديوهات توعوية", videos }: Vide
             {videos.map((video, i) => (
               <div key={i} className="min-w-0 flex-[0_0_100%] px-2">
                 <div className="relative overflow-hidden rounded-2xl shadow-card">
-                  <iframe
-                    src={`https://www.youtube.com/embed/${video.id}`}
-                    title={video.title}
-                    className="aspect-video w-full"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    loading="lazy"
-                  />
+                  <YouTubeFacade id={video.id} title={video.title} />
                 </div>
-                <p className="mt-3 text-center font-cairo text-sm font-semibold text-muted-foreground">
-                  {video.title}
-                </p>
+                {video.title && (
+                  <p className="mt-3 text-center font-cairo text-sm font-semibold text-muted-foreground">
+                    {video.title}
+                  </p>
+                )}
               </div>
             ))}
           </div>
