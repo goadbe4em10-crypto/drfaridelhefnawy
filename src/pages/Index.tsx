@@ -1,7 +1,8 @@
 import { lazy, Suspense } from "react";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
-import StickyWhatsAppButton from "@/components/StickyWhatsAppButton";
+
+const StickyWhatsAppButton = lazy(() => import("@/components/StickyWhatsAppButton"));
 
 const ServicesSection = lazy(() => import("@/components/ServicesSection"));
 const ImageCarousel = lazy(() => import("@/components/ImageCarousel"));
@@ -45,7 +46,9 @@ const Index = () => {
       <Suspense fallback={null}>
         <Footer />
       </Suspense>
-      <StickyWhatsAppButton />
+      <Suspense fallback={null}>
+        <StickyWhatsAppButton />
+      </Suspense>
     </>
   );
 };
