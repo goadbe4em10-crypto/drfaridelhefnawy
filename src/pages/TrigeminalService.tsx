@@ -176,6 +176,19 @@ const TrigeminalService = () => {
           </div>
         </section>
 
+        {/* ===== VIDEOS ===== */}
+        <section className="py-16 md:py-24">
+          <div className="container max-w-4xl">
+            <VideoCarousel
+              title="فيديوهات عن العصب الخامس"
+              videos={[
+                { id: "6K06SeuXYg8", title: "فيديو عن العصب الخامس ١" },
+                { id: "Lt524Llvrno", title: "فيديو عن العصب الخامس ٢" },
+              ]}
+            />
+          </div>
+        </section>
+
         {/* ===== SYMPTOMS ===== */}
         <section className="py-16 md:py-24">
           <div className="container max-w-4xl">
@@ -445,19 +458,6 @@ const TrigeminalService = () => {
                 ))}
               </div>
             </motion.div>
-          </div>
-        </section>
-
-        {/* ===== VIDEOS ===== */}
-        <section className="py-16 md:py-24">
-          <div className="container max-w-4xl">
-            <VideoCarousel
-              title="فيديوهات عن العصب الخامس"
-              videos={[
-                { id: "6K06SeuXYg8", title: "فيديو عن العصب الخامس ١" },
-                { id: "Lt524Llvrno", title: "فيديو عن العصب الخامس ٢" },
-              ]}
-            />
           </div>
         </section>
 

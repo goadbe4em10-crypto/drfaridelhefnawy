@@ -172,24 +172,6 @@ const AboutDoctor = () => {
           </div>
         </section>
 
-        {/* Philosophy */}
-        <section className="bg-primary py-16 md:py-24">
-          <div className="container text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="mb-6 font-cairo text-3xl font-extrabold text-primary-foreground md:text-4xl">
-                فلسفتي في العلاج
-              </h2>
-              <p className="mx-auto max-w-2xl font-cairo text-lg leading-relaxed text-primary-foreground/85">
-                أؤمن بأن كل مريض حالة فريدة تستحق خطة علاجية مخصصة. أحرص على شرح كل تفاصيل الحالة للمريض وعائلته بوضوح وبساطة، لأن الفهم والثقة هما أساس أي رحلة علاج ناجحة. هدفي ليس فقط العلاج، بل إعادة جودة الحياة لكل مريض.
-              </p>
-            </motion.div>
-          </div>
-        </section>
-
         {/* ===== VIDEO ===== */}
         <section className="py-16 md:py-24">
           <div className="container max-w-4xl">
