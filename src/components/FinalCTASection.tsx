@@ -1,9 +1,6 @@
-import { motion } from "framer-motion";
 import { useState } from "react";
 import CTAButtons from "./CTAButtons";
-import { Phone, Send } from "lucide-react";
-
-const PHONE = "01006074000";
+import { Send } from "lucide-react";
 
 const FinalCTASection = () => {
   const [name, setName] = useState("");
@@ -30,13 +27,7 @@ const FinalCTASection = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-primary-dark/50 to-transparent" />
       <div className="container relative z-10">
         <div className="grid items-center gap-10 md:grid-cols-2">
-          {/* Text & CTA */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center md:text-right"
-          >
+          <div className="text-center md:text-right">
             <h2 className="mb-4 font-cairo text-3xl font-extrabold text-primary-foreground md:text-4xl">
               لا تؤجل صحتك.. احجز استشارتك الآن
             </h2>
@@ -46,15 +37,9 @@ const FinalCTASection = () => {
             <div className="flex justify-center md:justify-start">
               <CTAButtons size="large" />
             </div>
-          </motion.div>
+          </div>
 
-          {/* Form */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.15 }}
-          >
+          <div>
             <form
               onSubmit={handleSubmit}
               className="rounded-2xl bg-background/10 p-6 backdrop-blur-sm md:p-8"
@@ -99,7 +84,7 @@ const FinalCTASection = () => {
                 </button>
               </div>
             </form>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

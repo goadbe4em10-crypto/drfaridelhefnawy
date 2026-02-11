@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import useEmblaCarousel from "embla-carousel-react";
 import { useCallback, useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -39,19 +38,14 @@ const TestimonialsCarousel = () => {
   return (
     <section className="py-16 md:py-24" id="testimonials">
       <div className="container">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mb-10 text-center"
-        >
+        <div className="mb-10 text-center">
           <h2 className="mb-3 font-cairo text-3xl font-extrabold text-heading md:text-4xl">
             آراء المرضى
           </h2>
           <p className="mx-auto max-w-xl font-cairo text-muted-foreground">
             ثقة مرضانا هي أكبر شهادة على جودة خدماتنا الطبية
           </p>
-        </motion.div>
+        </div>
 
         <div className="relative mx-auto max-w-2xl">
           <div className="overflow-hidden rounded-2xl" ref={emblaRef}>

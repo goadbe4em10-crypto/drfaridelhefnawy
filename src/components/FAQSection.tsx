@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import {
   Accordion,
   AccordionContent,
@@ -33,39 +32,28 @@ const FAQSection = () => {
   return (
     <section className="py-16 md:py-24">
       <div className="container max-w-3xl">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mb-10 text-center"
-        >
+        <div className="mb-10 text-center">
           <h2 className="mb-3 font-cairo text-3xl font-extrabold text-heading md:text-4xl">
             أسئلة شائعة
           </h2>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
-          <Accordion type="single" collapsible className="space-y-3">
-            {faqs.map((faq, index) => (
-              <AccordionItem
-                key={index}
-                value={`item-${index}`}
-                className="rounded-xl border border-border bg-card px-5 shadow-sm"
-              >
-                <AccordionTrigger className="font-cairo text-base font-bold text-heading hover:no-underline md:text-lg">
-                  {faq.q}
-                </AccordionTrigger>
-                <AccordionContent className="font-cairo leading-relaxed text-muted-foreground">
-                  {faq.a}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </motion.div>
+        <Accordion type="single" collapsible className="space-y-3">
+          {faqs.map((faq, index) => (
+            <AccordionItem
+              key={index}
+              value={`item-${index}`}
+              className="rounded-xl border border-border bg-card px-5 shadow-sm"
+            >
+              <AccordionTrigger className="font-cairo text-base font-bold text-heading hover:no-underline md:text-lg">
+                {faq.q}
+              </AccordionTrigger>
+              <AccordionContent className="font-cairo leading-relaxed text-muted-foreground">
+                {faq.a}
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
       </div>
     </section>
   );
