@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import CTAButtons from "./CTAButtons";
 import doctorImg from "@/assets/doctor-portrait.png";
 
@@ -7,12 +6,7 @@ const HeroSection = () => {
     <section className="relative overflow-hidden bg-section-alt pt-24 pb-16 md:pt-32 md:pb-24">
       <div className="container">
         <div className="grid items-center gap-8 md:grid-cols-2 md:gap-12">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            className="order-2 md:order-1"
-          >
+          <div className="order-2 md:order-1 animate-fade-in-up">
             <p className="mb-3 inline-block rounded-full bg-primary-light px-4 py-1 font-cairo text-sm font-semibold text-primary">
               جراحة مخ وأعصاب وظيفية لعلاج شلل الرعاش والصرع وجراحات التدخل المحدود للعمود الفقري
             </p>
@@ -29,23 +23,19 @@ const HeroSection = () => {
             <p className="mt-4 font-cairo text-sm text-muted-foreground">
               للحجز والاستفسار: <span className="font-bold text-heading" dir="ltr">01006074000</span>
             </p>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
-            className="order-1 flex justify-center md:order-2"
-          >
+          <div className="order-1 flex justify-center md:order-2 animate-fade-in-scale">
             <div className="relative">
               <div className="absolute -inset-4 rounded-3xl bg-primary/10 blur-2xl" />
               <img
                 src={doctorImg}
                 alt="د. فريد الحفناوي - استشاري جراحة المخ والأعصاب"
                 className="relative z-10 h-auto w-64 rounded-2xl object-cover shadow-card md:w-80"
+                fetchPriority="high"
               />
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
