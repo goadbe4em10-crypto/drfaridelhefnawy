@@ -1,5 +1,5 @@
 import CTAButtons from "./CTAButtons";
-import doctorImg from "@/assets/doctor-portrait.jpg";
+import doctorImg from "@/assets/doctor-portrait.png";
 
 const HeroSection = () => {
   return (
