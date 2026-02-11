@@ -25,9 +25,9 @@ import brainImg from "@/assets/brain-illustration.jpg";
 const PHONE = "01006074000";
 
 const parkinsonVideos = [
-  { id: "ysD5ie-9yNE", title: "فيديو توعوي" },
-  { id: "y9KqHgqtVSk", title: "فيديو توعوي ٢" },
-  { id: "xMWYDFtduzE", title: "فيديو توعوي ٣" },
+  { id: "ysD5ie-9yNE", title: "" },
+  { id: "y9KqHgqtVSk", title: "" },
+  { id: "xMWYDFtduzE", title: "" },
 ];
 
 const symptoms = [
