@@ -1,11 +1,9 @@
 import CTAButtons from "./CTAButtons";
-import doctorImg from "@/assets/doctor-portrait.png";
+import doctorImg from "@/assets/doctor-portrait.jpg";
 
 const HeroSection = () => {
   return (
     <section className="relative overflow-hidden bg-section-alt pt-24 pb-16 md:pt-32 md:pb-24">
-      {/* Preload LCP image */}
-      <link rel="preload" as="image" href={doctorImg} />
       <div className="container">
         <div className="grid items-center gap-8 md:grid-cols-2 md:gap-12">
           <div className="order-2 md:order-1 animate-fade-in-up">
@@ -28,18 +26,14 @@ const HeroSection = () => {
           </div>
 
           <div className="order-1 flex justify-center md:order-2 animate-fade-in-scale">
-            <div className="relative">
-              <div className="absolute -inset-4 rounded-3xl bg-primary/10 blur-2xl" />
-              <img
-                src={doctorImg}
-                alt="د. فريد الحفناوي - استشاري جراحة المخ والأعصاب"
-                width={320}
-                height={400}
-                className="relative z-10 h-auto w-64 rounded-2xl object-cover shadow-card md:w-80"
-                fetchPriority="high"
-                decoding="async"
-              />
-            </div>
+            <img
+              src={doctorImg}
+              alt="د. فريد الحفناوي - استشاري جراحة المخ والأعصاب"
+              width={320}
+              height={400}
+              className="h-auto w-64 rounded-2xl object-cover shadow-card md:w-80"
+              fetchPriority="high"
+            />
           </div>
         </div>
       </div>
