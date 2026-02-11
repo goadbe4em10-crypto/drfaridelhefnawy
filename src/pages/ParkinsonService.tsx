@@ -25,7 +25,7 @@ import brainImg from "@/assets/brain-illustration.jpg";
 const PHONE = "01006074000";
 
 const parkinsonVideos = [
-  { id: "ysD5ie-9yNE", title: "فيديو توعوي ١" },
+  { id: "ysD5ie-9yNE", title: "فيديو توعوي" },
   { id: "y9KqHgqtVSk", title: "فيديو توعوي ٢" },
   { id: "xMWYDFtduzE", title: "فيديو توعوي ٣" },
 ];
@@ -195,6 +195,16 @@ const ParkinsonService = () => {
                 />
               </motion.div>
             </div>
+          </div>
+        </section>
+
+        {/* ===== VIDEOS ===== */}
+        <section className="py-16 md:py-24">
+          <div className="container max-w-4xl">
+            <VideoCarousel
+              title="فيديوهات عن الشلل الرعاش"
+              videos={parkinsonVideos}
+            />
           </div>
         </section>
 
@@ -482,16 +492,6 @@ const ParkinsonService = () => {
             <div className="mt-8 flex justify-center">
               <CTAButtons size="large" />
             </div>
-          </div>
-        </section>
-
-        {/* ===== VIDEOS ===== */}
-        <section className="py-16 md:py-24">
-          <div className="container max-w-4xl">
-            <VideoCarousel
-              title="فيديوهات عن الشلل الرعاش"
-              videos={parkinsonVideos}
-            />
           </div>
         </section>
 
