@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import CTAButtons from "./CTAButtons";
 import { Link } from "react-router-dom";
 import brainImg from "@/assets/brain-illustration.jpg";
@@ -36,28 +35,19 @@ const ServicesSection = () => {
   return (
     <section id="services" className="py-16 md:py-24">
       <div className="container">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mb-12 text-center"
-        >
+        <div className="mb-12 text-center">
           <h2 className="mb-3 font-cairo text-3xl font-extrabold text-heading md:text-4xl">
             خدماتنا الطبية
           </h2>
           <p className="mx-auto max-w-xl font-cairo text-muted-foreground">
             نوفر أحدث العلاجات والتقنيات في جراحة المخ والأعصاب
           </p>
-        </motion.div>
+        </div>
 
         <div className="flex flex-col gap-16">
           {services.map((service, index) => (
-            <motion.div
+            <div
               key={service.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
               className="grid items-center gap-8 md:grid-cols-2 md:gap-12"
             >
               <div className={index % 2 === 1 ? "md:order-2" : ""}>
@@ -87,7 +77,7 @@ const ServicesSection = () => {
                   loading="lazy"
                 />
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

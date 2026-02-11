@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { Award, Cpu, HeartHandshake, UserCheck } from "lucide-react";
 
 const reasons = [
@@ -28,25 +27,16 @@ const WhyChooseSection = () => {
   return (
     <section className="bg-section-alt py-16 md:py-24">
       <div className="container">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mb-12 text-center"
-        >
+        <div className="mb-12 text-center">
           <h2 className="mb-3 font-cairo text-3xl font-extrabold text-heading md:text-4xl">
             لماذا تختار د. فريد الحفناوي؟
           </h2>
-        </motion.div>
+        </div>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {reasons.map((reason, index) => (
-            <motion.div
+          {reasons.map((reason) => (
+            <div
               key={reason.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
               className="group rounded-2xl bg-card p-6 shadow-card transition-shadow hover:shadow-card-hover"
             >
               <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-primary-light text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
@@ -56,7 +46,7 @@ const WhyChooseSection = () => {
               <p className="font-cairo text-sm leading-relaxed text-muted-foreground">
                 {reason.description}
               </p>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
