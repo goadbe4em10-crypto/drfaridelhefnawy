@@ -81,6 +81,8 @@ const ServicesSection = () => {
                 <img
                   src={service.image}
                   alt={service.alt}
+                  width={288}
+                  height={288}
                   className="h-64 w-64 rounded-2xl object-cover shadow-card md:h-72 md:w-72"
                   loading="lazy"
                 />
