@@ -1,16 +1,11 @@
 import { Phone } from "lucide-react";
-import { motion } from "framer-motion";
 
 const PHONE = "01006074000";
 const WHATSAPP_URL = `https://wa.me/2${PHONE}`;
 
 const FloatingCTA = () => {
   return (
-    <motion.div
-      initial={{ y: 100 }}
-      animate={{ y: 0 }}
-      className="fixed bottom-0 right-0 left-0 z-50 border-t border-border bg-background/95 p-3 backdrop-blur-md md:hidden"
-    >
+    <div className="fixed bottom-0 right-0 left-0 z-50 border-t border-border bg-background/95 p-3 backdrop-blur-md md:hidden animate-slide-up">
       <div className="flex gap-3">
         <a
           href={`tel:${PHONE}`}
@@ -31,7 +26,7 @@ const FloatingCTA = () => {
           واتساب
         </a>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

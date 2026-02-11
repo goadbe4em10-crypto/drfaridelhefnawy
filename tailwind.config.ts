@@ -106,6 +106,7 @@ export default {
         "fade-in-up": "fade-in-up 0.7s ease-out forwards",
         "fade-in-scale": "fade-in-scale 0.7s ease-out 0.2s forwards",
         "wiggle": "wiggle 0.6s ease-in-out infinite 2.6s",
+        "slide-up": "fade-in-up 0.3s ease-out forwards",
         "pulse-soft": "pulse-soft 2s ease-in-out infinite",
       },
     },
